@@ -50,20 +50,20 @@ function onClick() {
    promise()
 	   .then((res)=>{
 		   var re=res;
-	   document.getElementById("output").innerHTML =res;
-	   return promise2(re);
+	   document.getElementById("output").innerHTML ="Result:"+" "+res;
+	   return promise2(res);
    })
 	.then((res)=>{
-	   document.getElementById("output").innerHTML =res;
+	   document.getElementById("output").innerHTML ="Result:"+" "+res;
 		return sub(res);
    }).then((res)=>{
-		document.getElementById("output").innerHTML =res;
+		document.getElementById("output").innerHTML ="Result:"+" "+res;
 		return div(res);
    }).then((res)=>{
-		document.getElementById("output").innerHTML =res;
+		document.getElementById("output").innerHTML ="Result:"+" "+res;
 		return add(res)
    }).then((res)=>{
-		document.getElementById("output").innerHTML =res;
+		document.getElementById("output").innerHTML ="Result:"+" "+res;
 		return final(res);
    }).then((res)=>{
 		document.getElementById("output").innerHTML ="Final Result:"+" "+res;
