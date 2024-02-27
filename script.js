@@ -15,7 +15,7 @@ function promise2(res) {
     return new Promise((resolve, reject) => { 
               setTimeout(() => {
                 resolve(res);
-        }, 2000); 
+        }, 1000); 
     });
 }
 
