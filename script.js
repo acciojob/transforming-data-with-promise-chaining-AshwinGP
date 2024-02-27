@@ -18,6 +18,13 @@ function promise2(res) {
         }, 1000); 
     });
 }
+function multi(mul){
+	return new Promise((resolve, reject) => { 
+              setTimeout(() => {
+                resolve(mul * 2);
+        }, 1000); 
+    });
+}
 
 function sub(mul){
 	return new Promise((resolve,reject)=>{
@@ -52,7 +59,10 @@ function onClick() {
 		   var re=res;
 	   document.getElementById("output").innerHTML ="Result:"+" "+res;
 	   return promise2(res);
-   })
+   }).then((res)=>{
+		document.getElementById("output").innerHTML ="Result:"+" "+res;
+		return multi(res);  
+	})
 	.then((res)=>{
 	   document.getElementById("output").innerHTML ="Result:"+" "+res;
 		return sub(res);
